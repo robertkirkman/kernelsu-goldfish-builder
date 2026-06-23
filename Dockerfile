@@ -65,8 +65,8 @@ git apply -v << 'PATCHEOF'
      if (!boot_cpu_has(X86_FEATURE_INDIRECT_SAFE)) {
          pr_alert("*************************************************************");
 PATCHEOF
-tools/bazel run //common:kernel_x86_64_dist -- --destdir=/root/kernel-artifacts
-tools/bazel run //common-modules/virtual-device:virtual_device_x86_64_dist -- --destdir=/root/kernel-artifacts
+tools/bazel run --config=fast --config=stamp //common:kernel_x86_64_dist -- --destdir=/root/kernel-artifacts
+tools/bazel run --config=fast --config=stamp //common-modules/virtual-device:virtual_device_x86_64_dist -- --destdir=/root/kernel-artifacts
 DOCKEREOF
 
 WORKDIR /root/android
