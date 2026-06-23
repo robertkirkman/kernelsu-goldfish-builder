@@ -25,6 +25,7 @@ emulator -grpc 8554 -show-kernel -verbose
 
 ```bash
 # separate terminal
-curl -O -L https://github.com/tiann/KernelSU/releases/download/v3.2.4/KernelSU_v3.2.4_32457-release.apk
-adb install KernelSU_v3.2.4_32457-release.apk
+curl -O -L https://nightly.link/tiann/KernelSU/actions/runs/27767799331/manager.zip
+unzip manager.zip
+adb install KernelSU_v3.2.4-64-g6c97d1dd_32521-release.apk
 ```

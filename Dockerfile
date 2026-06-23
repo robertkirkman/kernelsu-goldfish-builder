@@ -31,7 +31,7 @@ DOCKEREOF
 WORKDIR /root/android-kernel
 
 RUN <<DOCKEREOF
-curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v3.2.4
+curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s 6c97d1dd0011e9d14cdf6082d84a98c5c802eec5
 git apply -v << 'PATCHEOF'
 --- a/common/arch/x86/entry/common.c
 +++ b/common/arch/x86/entry/common.c
